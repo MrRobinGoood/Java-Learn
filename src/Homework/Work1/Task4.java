@@ -18,7 +18,7 @@ public class Task4 {
     public int sumPrimeNumInDiapason(int start, int end) {
         Task3 task3 = new Task3();
         int sumPrimeNumbers = 0;
-        for (int i = start;i <= end; i++) {
+        for (int i = start; i <= end; i++) {
             if (task3.isPrime(i)) {
                 sumPrimeNumbers += i;
             }
