@@ -19,6 +19,7 @@ public class Task1 {
         partNumber2 = number % 1000;
         sumPart1 = (partNumber1 / 100) + ((partNumber1 / 10) % 10) + (partNumber1 % 10);
         sumPart2 = (partNumber2 / 100) + ((partNumber2 / 10) % 10) + (partNumber2 % 10);
+
         return (sumPart1 == sumPart2);
 
 
