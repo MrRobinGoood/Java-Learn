@@ -14,11 +14,11 @@ public class Task2 {
         System.out.println("The sum of positive numbers:" + task2.sumPositiveNumbers(array));
     }
 
-    public int sumPositiveNumbers(int[] number) {
+    public int sumPositiveNumbers(int[] array) {
         int sumPosNum = 0;
-        for (int i = 0; i < number.length; i++) {
-            if (number[i] > 0) {
-                sumPosNum += number[i];
+        for (int i = 0; i < array.length; i++) {
+            if (array[i] > 0) {
+                sumPosNum += array[i];
             }
         }
         return sumPosNum;
