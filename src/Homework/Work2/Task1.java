@@ -4,10 +4,10 @@ import java.util.Random;
 
 public class Task1 {
     public static void main(String[] args) {
-        Task1 application = new Task1();
-        int[] array = application.createArray(5);
-        array = application.fillArrayByRandom(array);
-        application.printArray(array);
+        Task1 task1 = new Task1();
+        int[] array = task1.createArray(5);
+        array = task1.fillArrayByRandom(array, 10, 100);
+        task1.printArray(array);
     }
 
     public int[] createArray(int length) {
@@ -15,10 +15,10 @@ public class Task1 {
         return array;
     }
 
-    public int[] fillArrayByRandom(int[] array) {
+    public int[] fillArrayByRandom(int[] array, int startRnd, int endRnd) {
         Random rnd = new Random();
         for (int i = 0; i < array.length; i++) {
-            array[i] = rnd.nextInt(101);
+            array[i] = rnd.nextInt(endRnd - startRnd) + startRnd;
         }
         return array;
     }
