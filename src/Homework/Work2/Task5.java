@@ -5,8 +5,8 @@ public class Task5 {
         Task5 task5 = new Task5();
 
         Task1 task1 = new Task1();
-        int[] array = task1.createArray(5);
-        task1.fillArrayByRandom(array, 0, 100);
+        int[] array = task1.createArray(10);
+        task1.fillArrayByRandom(array, 10, 100);
         task1.printArray(array);
 
         System.out.println();

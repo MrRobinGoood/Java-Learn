@@ -5,7 +5,7 @@ import java.util.Random;
 public class Task1 {
     public static void main(String[] args) {
         Task1 task1 = new Task1();
-        int[] array = task1.createArray(5);
+        int[] array = task1.createArray(10);
         array = task1.fillArrayByRandom(array, 10, 100);
         task1.printArray(array);
     }
