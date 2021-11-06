@@ -8,7 +8,10 @@ public class Task2 {
         int[] array = task1.createArray(5);
         array = task1.fillArrayByRandom(array, -10, 50);
         task1.printArray(array);
-        System.out.println(task2.sumPositiveNumbers(array));
+
+        System.out.println();
+
+        System.out.println("The sum of positive numbers:" + task2.sumPositiveNumbers(array));
     }
 
     public int sumPositiveNumbers(int[] number) {
