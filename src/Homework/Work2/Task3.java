@@ -9,32 +9,30 @@ public class Task3 {
         task1.printArray(array);
 
         System.out.println();
-        System.out.println("Max number is " + task3.maxNumberAndIndex(array)[0]);
-        System.out.println("Min number is " + task3.minNumberAndIndex(array)[0]);
+        System.out.println("Max number is " + array[task3.maxNumIndex(array)]);
+        System.out.println("Min number is " + array[task3.minNumIndex(array)]);
 
     }
 
-    public int[] maxNumberAndIndex(int[] array) {
-        int maxNum = array[0], maxInd = 0;
+    public int maxNumIndex(int[] array) {
+        int maxInd = 0;
         for (int i = 0; i < array.length; i++) {
-            if (array[i] > maxNum) {
+            if (array[i] > array[maxInd]) {
                 maxInd = i;
-                maxNum = array[i];
             }
         }
-        int[] maxNumAndInd = new int[]{maxNum, maxInd};
-        return maxNumAndInd;
+        return maxInd;
     }
 
-    public int[] minNumberAndIndex(int[] array) {
-        int minNum = array[0], minInd = 0;
+    public int minNumIndex(int[] array) {
+        int minInd = 0;
         for (int i = 0; i < array.length; i++) {
-            if (array[i] < minNum) {
+            if (array[i] < array[minInd]) {
                 minInd = i;
-                minNum = array[i];
             }
         }
-        int[] minNumAndInd = new int[]{minNum, minInd};
-        return minNumAndInd;
+        return minInd;
     }
+
+
 }
