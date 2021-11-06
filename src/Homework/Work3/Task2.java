@@ -10,19 +10,19 @@ public class Task2 {
         task1.printMatrix(array);
 
         System.out.println();
-        int[] cloneSumOfLines = task2.sumOfLines(array);
-        task21.printArray(cloneSumOfLines);
+        int[] cloneSumOfColumns = task2.sumOfColumns(array);
+        task21.printArray(cloneSumOfColumns);
     }
 
-    public int[] sumOfLines(int[][] array) {
+    public int[] sumOfColumns(int[][] array) {
         Homework.Work2.Task1 task21 = new Homework.Work2.Task1();
-        int[] arraySumOfLines = task21.createArray(array.length);
+        int[] arraySumOfColumns = task21.createArray(array.length);
         for (int i = 0; i < array.length; i++) {
             for (int j = 0; j < array.length; j++) {
-                arraySumOfLines[i] += array[j][i];
+                arraySumOfColumns[i] += array[j][i];
             }
         }
-        return arraySumOfLines;
+        return arraySumOfColumns;
     }
 
 }
