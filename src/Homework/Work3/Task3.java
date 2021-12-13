@@ -10,8 +10,17 @@ public class Task3 {
         task1.printMatrix(array);
 
         System.out.println();
+        if ((task3.isEqualSumLines(array) != -1) && (task3.isEqualSumColumns(array) != -1) && (task3.isEqualSumDiagonals(array) != -1) && (task3.isEqualSumLines(array) == task3.isEqualSumColumns(array)) && (task3.isEqualSumLines(array) == task3.isEqualSumDiagonals(array))) {
+            System.out.println("This Matrix is Magic");
+        } else {
+            System.out.println("This Matrix Not Magic");
+        }
+       /* Вывод значений, если суммы равны то выводит саму сумму, если суммы не равны, выводит -1
         System.out.println(task3.isEqualSumLines(array));
         System.out.println(task3.isEqualSumColumns(array));
+        System.out.println(task3.isEqualSumDiagonals(array));
+        */
+
     }
 
     public int isEqualSumLines(int[][] array) {
@@ -36,15 +45,26 @@ public class Task3 {
         return arraySumOfColumns[0];
     }
 
-    public int isEqualSumMainDiagonal(int[][] array) {
-        int sumMainDiagonal
+    public int[] sumMainDiagonalAndSumSideDiagonal(int[][] array) {
+        Homework.Work2.Task1 task21 = new Homework.Work2.Task1();
+        int[] arraySumMainAndSumSideDiagonals = task21.createArray(array.length);
         for (int i = 0; i < array.length; i++) {
-            for (int j = 0; j < array.length; j++) {
-                if (i == j) {
+            arraySumMainAndSumSideDiagonals[0] += array[i][i];
+        }
+        for (int i = 0; i < array.length; i++) {
+            arraySumMainAndSumSideDiagonals[1] += array[i][array.length - 1 - i];
+        }
+        return arraySumMainAndSumSideDiagonals;
+    }
 
-                }
-            }
+    public int isEqualSumDiagonals(int[][] array) {
+        Task3 task3 = new Task3();
+        int[] sumMainAndSumSideDiagonals = task3.sumMainDiagonalAndSumSideDiagonal(array);
+        if (sumMainAndSumSideDiagonals[0] != sumMainAndSumSideDiagonals[1]) {
+            return -1;
 
+        } else {
+            return sumMainAndSumSideDiagonals[0];
         }
     }
 
