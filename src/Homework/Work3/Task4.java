@@ -7,30 +7,23 @@ public class Task4 {
         int[][] array = task1.createMatrix(3, 3);
         array = task1.fillMatrixByRandom(array, 0, 10);
         task1.printMatrix(array);
-/*
         System.out.println();
         task4.sortingArrayByChoice(array);
         task1.printMatrix(array);
- */
     }
 
-/*
-    public void sortingArrayByChoice(int[][] array) {
-
-        for (int i = 0; i < array.length; i++) {
-            for (int j = 0; j < array.length; j++) {
-                int minNumOfArray = array[i][j];
-
-                for (int k = array.length-1; k>i ; k--) {
-                    for (int l = array.length-1; l>j ; l--) {
-                if (array[k][l]<minNumOfArray){
-                    minNumOfArray = array[k][l];
+    int[][] sortingArrayByChoice(int[][] array) {
+        int indexEnd = array.length * array[0].length;
+        for (int i = 0; i < indexEnd - 1; i++) {
+            int indexLength = i / array.length, indexWidth = i % array[0].length;
+            for (int j = i + 1; j < indexEnd; j++) {
+                if (array[indexLength][indexWidth] > array[j / array.length][j % array[0].length]) {
+                    int temp = array[j / array.length][j % array[0].length];
+                    array[j / array.length][j % array[0].length] = array[indexLength][indexWidth];
+                    array[indexLength][indexWidth] = temp;
                 }
-                }
-                    }
-                System.out.println(minNumOfArray);
             }
         }
+        return array;
     }
-*/
 }
