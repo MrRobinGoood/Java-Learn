@@ -10,10 +10,10 @@ public class Task5 {
     }
 
     public String searchUniqueSymbols(String str) {
-        StringBuilder stringBuilder = new StringBuilder("");
+        StringBuilder stringBuilder = new StringBuilder();
         char[] strArray = str.toCharArray();
         for (int i = 0; i < strArray.length; i++) {
-            if (stringBuilder.toString().contains(String.valueOf(strArray[i])) == false) {
+            if (!stringBuilder.toString().contains(String.valueOf(strArray[i]))) {
                 stringBuilder.append(strArray[i]);
             }
         }
