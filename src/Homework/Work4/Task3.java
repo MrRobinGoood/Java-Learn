@@ -8,8 +8,8 @@ public class Task3 {
         Task1 task1 = new Task1();
         String str = "a1b23c4%&50";
         String completeStr = task3.createOnlyNumbersStr(str);
-        int[] arr = task3.createArrayOfNumbers(completeStr);
-        task1.printArray(arr);
+        int[] array = task3.createArrayOfNumbers(completeStr);
+        task1.printArray(array);
     }
 
     public String createOnlyNumbersStr(String str) {
