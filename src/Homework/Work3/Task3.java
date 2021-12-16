@@ -10,16 +10,11 @@ public class Task3 {
         task1.printMatrix(array);
 
         System.out.println();
-        if ((task3.isEqualSumLines(array) != -1) && (task3.isEqualSumColumns(array) != -1) && (task3.isEqualSumDiagonals(array) != -1) && (task3.isEqualSumLines(array) == task3.isEqualSumColumns(array)) && (task3.isEqualSumLines(array) == task3.isEqualSumDiagonals(array))) {
+        if (task3.isMatrixMagic(array)) {
             System.out.println("This Matrix is Magic");
         } else {
             System.out.println("This Matrix Not Magic");
         }
-       /* Вывод значений, если суммы равны то выводит саму сумму, если суммы не равны, выводит -1
-        System.out.println(task3.isEqualSumLines(array));
-        System.out.println(task3.isEqualSumColumns(array));
-        System.out.println(task3.isEqualSumDiagonals(array));
-        */
 
     }
 
@@ -65,6 +60,15 @@ public class Task3 {
 
         } else {
             return sumMainAndSumSideDiagonals[0];
+        }
+    }
+
+    public boolean isMatrixMagic(int[][] array) {
+        Task3 task3 = new Task3();
+        if ((task3.isEqualSumLines(array) != -1) && (task3.isEqualSumColumns(array) != -1) && (task3.isEqualSumDiagonals(array) != -1) && (task3.isEqualSumLines(array) == task3.isEqualSumColumns(array)) && (task3.isEqualSumLines(array) == task3.isEqualSumDiagonals(array))) {
+            return true;
+        } else {
+            return false;
         }
     }
 
