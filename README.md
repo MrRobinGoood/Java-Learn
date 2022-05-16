@@ -5,4 +5,4 @@
 2. [Работа с одномерными массивами](src/main/java/Homework/Work2)
 3. [Работа с двумерными массивами](src/main/java/Homework/Work3)
 4. [Работа со строками](src/main/java/Homework/Work4)
-4. [Работа со сборщиком и тестирование](src/main/java/Homework/Work5)
+4. [Работа со сборщиком и тестирование](src/test/java/Homework)
