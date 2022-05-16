@@ -6,9 +6,14 @@ public class Task7 {
     public static void main(String[] args) {
         Task6 task6 = new Task6();
         Task7 task7 = new Task7();
-        String str = task7.inputString();
-        String complete = task6.maxUniqueSymbols(str.trim().split("\\s+"));
+        String complete = task7.maxUniqueInStr(task7.inputString());
         System.out.println("Больше всего уникальных символов в слове " + complete);
+    }
+
+    public String maxUniqueInStr(String str) {
+        Task6 task6 = new Task6();
+        String complete = task6.maxUniqueSymbols(str.trim().split("\\s+"));
+        return complete;
     }
 
     public String inputString() {
