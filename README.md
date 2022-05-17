@@ -7,3 +7,4 @@
 4. [Работа со строками](src/main/java/Homework/Work4)
 5. [Работа со сборщиком и тестирование](src/test/java/Homework)
 6. [Работа с ООП](src/main/java/Homework/Work6)
+7. [Работа с файлами и Stream API](src/main/java/Homework/Work7)
