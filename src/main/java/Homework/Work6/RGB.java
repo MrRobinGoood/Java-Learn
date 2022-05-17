@@ -13,7 +13,7 @@ public class RGB extends Color {
 
     @Override
     public String toString() {
-        return "red = " + red + "\n" + "green = " + green + "\n" + "blue = " + blue;
+        return "Red = " + red + "\n" + "Green = " + green + "\n" + "Blue = " + blue;
     }
 
     @Override
