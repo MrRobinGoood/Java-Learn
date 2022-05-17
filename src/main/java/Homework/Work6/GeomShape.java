@@ -17,7 +17,7 @@ public class GeomShape {
 
     void setColor(Color color) {
         boolean flag = color.isColor();
-        if (!flag) throw new IllegalArgumentException("wrong color value");
+        if (!flag) throw new IllegalArgumentException("Invalid value of color");
         this.color = color;
     }
 
