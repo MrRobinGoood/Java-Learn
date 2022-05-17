@@ -13,12 +13,12 @@ public class Square extends GeomShape {
         return this.lenA * this.lenA;
     }
 
-    public double getSides() {
+    public double getLenA() {
         return this.lenA;
     }
 
     public String toString() {
-        return "LenA = " + this.getSides() + "\n" + "Area = " + this.getArea() + "\n";
+        return "LenA = " + this.getLenA() + "\n" + "Area = " + this.getArea() + "\n";
     }
 
 }

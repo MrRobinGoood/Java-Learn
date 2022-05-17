@@ -26,20 +26,20 @@ public class Triangle extends GeomShape {
         return Math.sqrt(p * (p - this.lenA) * (p - this.lenB) * (p - this.lenC));
     }
 
-    public double getSides1() {
+    public double getLenA() {
         return this.lenA;
     }
 
-    public double getSides2() {
+    public double getLenB() {
         return this.lenB;
     }
 
-    public double getSides3() {
+    public double getLenC() {
         return this.lenC;
     }
 
     public String toString() {
-        return "LenA = " + this.getSides1() + "\n" + "LenB = " + this.getSides2() + "\n" + "LenC = " + this.getSides3() + "\n" + "Area = " + this.getArea() + "\n";
+        return "LenA = " + this.getLenA() + "\n" + "LenB = " + this.getLenB() + "\n" + "LenC = " + this.getLenC() + "\n" + "Area = " + this.getArea() + "\n";
     }
 }
 
