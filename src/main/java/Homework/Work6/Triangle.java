@@ -6,24 +6,18 @@ public class Triangle extends GeomShape {
     public double lenB;
     public double lenC;
 
-    public Triangle(double sides1, double sides2, double sides3, Color color) {
+    public Triangle(double lenA, double lenB, double lenC, Color color) {
         super(color);
-        if (sides1 <= 0 || sides2 <= 0 || sides3 <= 0) throw new IllegalArgumentException("Incorrect value of length");
-        this.lenA = sides1;
-        this.lenB = sides2;
-        this.lenC = sides3;
+        if (lenA <= 0 || lenB <= 0 || lenC <= 0) throw new IllegalArgumentException("Incorrect value of length");
+        this.lenA = lenA;
+        this.lenB = lenB;
+        this.lenC = lenC;
 
         if (this.lenA + this.lenB < this.lenC
                 || this.lenB + this.lenC < this.lenA
                 || this.lenC + this.lenA < this.lenB) {
             throw new IllegalArgumentException("Incorrect value of length");
         }
-    }
-
-    public double getArea() {
-        double p;
-        p = (this.lenA + this.lenB + this.lenC) / 2;
-        return Math.sqrt(p * (p - this.lenA) * (p - this.lenB) * (p - this.lenC));
     }
 
     public double getLenA() {
@@ -36,6 +30,12 @@ public class Triangle extends GeomShape {
 
     public double getLenC() {
         return this.lenC;
+    }
+
+    public double getArea() {
+        double p;
+        p = (this.lenA + this.lenB + this.lenC) / 2;
+        return Math.sqrt(p * (p - this.lenA) * (p - this.lenB) * (p - this.lenC));
     }
 
     public String toString() {
